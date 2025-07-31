@@ -19,11 +19,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')))
 
 // Importar rutas
 const indexRoutes = require('./routes/index')
+const todoRoutes = require('./routes/todo-route')
 const proyecto1Routes = require('./routes/p1-route')
 const proyecto2Routes = require('./routes/p2-route')
 const adminRoutes = require('./routes/admin-route')
 
 app.use('/', indexRoutes)
+app.use('/todo', todoRoutes)
 app.use('/p1', proyecto1Routes)
 app.use('/p2', proyecto2Routes)
 app.use('/admin', adminRoutes)
